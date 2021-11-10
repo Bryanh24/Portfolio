@@ -1,7 +1,7 @@
 const OpenResumeBtn = document.querySelector('#open-resume-btn');
 
 function OpenResume() {
-    ResumeURL = '../files/Bryan-resume.pdf'
+    ResumeURL = 'https://bryanh24.github.io/Portfolio/files/Bryan-resume.pdf'
     window.open(ResumeURL, '_blank');
 }
 
