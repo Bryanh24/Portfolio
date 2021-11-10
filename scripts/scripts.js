@@ -9,8 +9,9 @@ function OpenResume() {
 window.addEventListener('scroll', () => {
     let header = document.querySelector('header');
     let windowPosition = window.scrollY > 0;
+    let ScreenWidth = screen.width >= 768;
 
-    header.classList.toggle('scrolling-active', windowPosition);
+    header.classList.toggle('scrolling-active', windowPosition && ScreenWidth);
 });
 
 OpenResumeBtn.addEventListener('click', OpenResume);

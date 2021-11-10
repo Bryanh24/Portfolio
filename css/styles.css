@@ -113,24 +113,44 @@ h3 {
 
 .nav-bg {
     display: flex;
-    background-color: transparent;
-    color: var(--white);
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    top: 0;
-    position: fixed;
-    right: 0;
-    left: 0;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    z-index: 1030;
-    width: 100%;
+    flex-direction: column;
+    background-color: var(--dark);
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .nav-bg {
+        flex-direction: row;
+        background-color: transparent;
+        color: var(--white);
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        top: 0;
+        position: fixed;
+        right: 0;
+        left: 0;
+        padding-left: 10rem;
+        padding-right: 10rem;
+        z-index: 1030;
+        height: 7rem;
+        width: 100%;
+        visibility: visible;
+    }
 }
 
 .navigation {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .navigation {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
 
 
@@ -157,13 +177,17 @@ h3 {
     text-align: center;
     color: var(--white);
     text-decoration: none;
-    margin-left: 5rem;
     text-transform: uppercase;
-    font-weight:600
-    
+    font-weight: 600
 }
 
-.nav-bg img{
+@media (min-width: 768px) {
+    .navigation a {
+        margin-left: 5rem;
+    }
+}
+
+.nav-bg img {
     height: 6rem;
 }
 
@@ -363,6 +387,7 @@ h3 {
 
 .resumes {
     display: flex;
+    flex-direction: column;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -372,6 +397,12 @@ h3 {
     color: #333333;
     font-weight: 400;
     overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .resumes {
+        flex-direction: row;
+    }
 }
 
 .job {
@@ -384,11 +415,13 @@ h3 {
     font-size: 15px;
     color: #333333;
 }
-@media (min-width: 768px){
-    .job{
+
+@media (min-width: 768px) {
+    .job {
         display: inline;
     }
 }
+
 .experience h3,
 h4,
 h5 {
